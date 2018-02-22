@@ -26,14 +26,6 @@ const requestComplete = function () {
 }
 
 const createSeries = function(countries){
-
-  // let series = [{ //NEW
-  //   name: "Cohort 7",
-  //   data: [8, 12, 3, 1]
-  // }, { //NEW
-  //   name: "Cohort 8",
-  //   data: [6, 4, 8, 5]
-  // }]
   const topTenPopulationCountries = countries.sort(function(countryA, countryB){
     return countryB.population - countryA.population
   })
@@ -44,7 +36,7 @@ const createSeries = function(countries){
     let dataSet = {name: topTenPopulationCountries[index].name, data: [topTenPopulationCountries[index].population]};
     series.push(dataSet);
   }
-
+console.log(series);
   return series;
 }
 

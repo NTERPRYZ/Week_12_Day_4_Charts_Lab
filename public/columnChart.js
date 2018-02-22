@@ -9,10 +9,20 @@ const ColumnChart = function(series) {
       title: {
         text: "Population By Country"
       },
+
       series: series,
+
       xAxis: { //NEW
-        Title: "Countries"
+        title: {
+          text:"Country"
+        },
+        tickInterval: 1
       }
-    });
+      // yAxis: {
+      //     title: {
+      //       text: "Population"
+      //     }
+
+  })
 
 }
