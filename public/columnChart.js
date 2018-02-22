@@ -1,4 +1,4 @@
-const ColumnChart = function() {
+const ColumnChart = function(series) {
 
   const container = document.querySelector("#column-chart");
     const chart = new Highcharts.Chart({ //NEW
@@ -7,14 +7,11 @@ const ColumnChart = function() {
         renderTo: container
       },
       title: {
-        text: "Our Favourite Programming Languages"
+        text: "Population By Country"
       },
-      series: [{ //NEW
-        name: "Cohort 7",
-        data: [8, 12, 3, 1]
-      }],
+      series: series,
       xAxis: { //NEW
-        categories: ['JavaScript', 'Java', 'Ruby', 'Algol']
+        Title: "Countries"
       }
     });
 
